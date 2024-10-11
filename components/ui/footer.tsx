@@ -1,6 +1,7 @@
 import Logo from "./logo";
 import Image from "next/image";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -23,13 +24,13 @@ export default function Footer() {
           {/* 1st block */}
           <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">Our Products</h3>
-            <ul className="space-y-2 text-sm" style={{minWidth:300}}>
+            <ul className="space-y-2 text-sm" style={{ minWidth: 300 }}>
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  PB 365
+                  <Link href={"/products/pb365"}>PB 365</Link>
                 </a>
               </li>
               <li>
@@ -37,7 +38,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Learning Managment System
+                  <Link href={"/products/lms"}>Learning Managment System</Link>
                 </a>
               </li>
               <li>
@@ -45,7 +46,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Property Go
+                  <Link href={"/products/property_go"}>Property Go</Link>
                 </a>
               </li>
               <li>
@@ -53,7 +54,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  AeroEstate
+                  <Link href={"/products/aeroestate"}>AeroEstate</Link>
                 </a>
               </li>
               <li>
@@ -61,7 +62,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  MenuKhwaga
+                  <Link href={"/products/menu_khwaga"}>MenuKhwaga</Link>
                 </a>
               </li>
             </ul>
@@ -143,9 +144,9 @@ export default function Footer() {
             </ul>
           </div>
           {/* 4th block */}
-          <div className="space-y-2" >
+          <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">Get Involved</h3>
-            <ul className="space-y-2 text-sm" style={{minWidth:300}}>
+            <ul className="space-y-2 text-sm" style={{ minWidth: 300 }}>
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
