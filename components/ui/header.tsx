@@ -88,15 +88,16 @@ export default function Header() {
 
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
+      <Image alt="loader" className="w-full h-20"src={require("@/public/images/loader.gif")} />
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-sm">
           {/* Site branding */}
           <div className="flex flex-1 items-center">
             <Logo footer={false} />
           </div>
-
           {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-1">
+          <ul className="hidden md:flex flex-1 items-center justify-end gap-1">
             {/* Our Products Dropdown */}
             <li
               className="relative group hover:text-indigo-500"
@@ -308,15 +309,15 @@ export default function Header() {
             {/* Get Involved Dropdown */}
             <li className="relative group hover:text-indigo-500">
               <div data-aos="fade-down" data-aos-delay={400}>
-              <Link href="/signup">
-                <div className="btn group mb-2 w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto">
-                  <span className="relative inline-flex items-center">
-                    Become a partner
-                    <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-                      -&gt;
+                <Link href="/signup">
+                  <div className="btn group mb-2 w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto">
+                    <span className="relative inline-flex items-center">
+                      Become a partner
+                      <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                        -&gt;
+                      </span>
                     </span>
-                  </span>
-                </div>
+                  </div>
                 </Link>
               </div>
             </li>
