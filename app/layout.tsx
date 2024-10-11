@@ -2,8 +2,12 @@ import "./css/style.css";
 
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from "@/components/ui/header";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 
 const inter = Inter({
   subsets: ["latin"],
