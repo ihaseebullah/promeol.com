@@ -55,6 +55,7 @@ export default function RootLayout({
   return (
     <LoadingProvider>
       <html lang="en">
+        <title>Promeol</title>
         <body
           className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
         >

@@ -7,7 +7,6 @@ import { useLoading } from "@/context/uicontext";
 
 export default function Products() {
   const { loading, setLoading } = useLoading();
-
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {

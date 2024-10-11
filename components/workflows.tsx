@@ -6,7 +6,7 @@ import Spotlight from "@/components/spotlight";
 
 export default function Workflows() {
   return (
-    <section>
+    <section data-aos="fade-down" data-aos-delay={500}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           {/* Section header */}

@@ -17,7 +17,6 @@ export default function Header() {
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
-  const [showGetInvolvedDropdown, setShowGetInvolvedDropdown] = useState(false);
   const { loading, setLoading } = useLoading();
   const [productsDropdownTimeout, setProductsDropdownTimeout] =
     useState<NodeJS.Timeout | null>(null);
@@ -73,13 +72,6 @@ export default function Header() {
     );
   };
 
-  const handleGetInvolvedMouseEnter = () => {
-    if (getInvolvedDropdownTimeout) {
-      clearTimeout(getInvolvedDropdownTimeout);
-    }
-    setShowGetInvolvedDropdown(true);
-  };
-
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       {loading && <Loader />}
@@ -127,7 +119,8 @@ export default function Header() {
                   >
                     <li className="dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
                       <Link
-                        href="/products/category1"
+                        onClick={() => setLoading(true)}
+                        href="/products/pb365"
                         className="relative z-10"
                       >
                         <FontAwesomeIcon
@@ -140,7 +133,10 @@ export default function Header() {
                     </li>
 
                     <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
-                      <Link href="/products/category2">
+                      <Link
+                        onClick={() => setLoading(true)}
+                        href="/products/lms"
+                      >
                         <FontAwesomeIcon
                           icon={Icons.faCaretRight}
                           className="fa-fw mr-1 hover:text-indigo-500"
@@ -150,7 +146,10 @@ export default function Header() {
                       <span className="expanding-line"></span>
                     </li>
                     <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
-                      <Link href="/products/category2">
+                      <Link
+                        onClick={() => setLoading(true)}
+                        href="/products/property_go"
+                      >
                         <FontAwesomeIcon
                           icon={Icons.faCaretRight}
                           className="fa-fw mr-1 hover:text-indigo-500"
@@ -160,7 +159,10 @@ export default function Header() {
                       <span className="expanding-line"></span>
                     </li>
                     <li className="dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
-                      <Link href="/products/category2">
+                      <Link
+                        onClick={() => setLoading(true)}
+                        href="/products/aeroestate"
+                      >
                         <FontAwesomeIcon
                           icon={Icons.faCaretRight}
                           className="fa-fw mr-1 hover:text-indigo-500"
@@ -170,7 +172,10 @@ export default function Header() {
                       <span className="expanding-line"></span>
                     </li>
                     <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
-                      <Link href="/products/category2">
+                      <Link
+                        onClick={() => setLoading(true)}
+                        href="/products/menu_khwaga"
+                      >
                         <FontAwesomeIcon
                           icon={Icons.faCaretRight}
                           className="fa-fw mr-1 hover:text-indigo-500"
@@ -190,7 +195,11 @@ export default function Header() {
               onMouseEnter={handleCompanyMouseEnter}
               onMouseLeave={handleCompanyMouseLeave}
             >
-              <Link href="/company" className="btn-sm relative z-10">
+              <Link
+                onClick={() => setLoading(true)}
+                href="/company"
+                className="btn-sm relative z-10"
+              >
                 <Image
                   src={require("@/public/images/ico.svg")}
                   width={20}
@@ -212,7 +221,12 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category2">Blog</Link>
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category2"
+                    >
+                      Blog
+                    </Link>
                     <span className="expanding-line"></span>
                   </li>
                   <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
@@ -220,7 +234,12 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category2">Careers</Link>
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category2"
+                    >
+                      Careers
+                    </Link>
                     <span className="expanding-line"></span>
                   </li>
                   <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
@@ -228,7 +247,12 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category2">Our Team</Link>
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category2"
+                    >
+                      Our Team
+                    </Link>
                     <span className="expanding-line"></span>
                   </li>
                   <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
@@ -236,7 +260,12 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category1">About Us</Link>
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category1"
+                    >
+                      About Us
+                    </Link>
                     <span className="expanding-line"></span>
                   </li>
                   <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
@@ -244,7 +273,10 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category2">
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category2"
+                    >
                       Diversity & Inclusion
                     </Link>
                     <span className="expanding-line"></span>
@@ -259,7 +291,11 @@ export default function Header() {
               onMouseEnter={handleResourcesMouseEnter}
               onMouseLeave={handleResourcesMouseLeave}
             >
-              <Link href="/resources" className="btn-sm relative z-10">
+              <Link
+                onClick={() => setLoading(true)}
+                href="/resources"
+                className="btn-sm relative z-10"
+              >
                 <FontAwesomeIcon
                   icon={faClipboard}
                   className="fa-fw mx-1 hover:text-indigo-500"
@@ -278,7 +314,12 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category1">Community</Link>
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category1"
+                    >
+                      Community
+                    </Link>
                     <span className="expanding-line"></span>
                   </li>
                   <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
@@ -286,7 +327,12 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category2">Terms of services</Link>
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category2"
+                    >
+                      Terms of services
+                    </Link>
                     <span className="expanding-line"></span>
                   </li>
                   <li className=" dropdown-item py-1 text-sm font-sm text-indigo-200/65  hover:text-indigo-500 relative group">
@@ -294,7 +340,10 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link href="/products/category2">
+                    <Link
+                      onClick={() => setLoading(true)}
+                      href="/products/category2"
+                    >
                       Report a vulnerability
                     </Link>
                     <span className="expanding-line"></span>
@@ -306,7 +355,7 @@ export default function Header() {
             {/* Get Involved Dropdown */}
             <li className="relative group hover:text-indigo-500">
               <div data-aos="fade-down" data-aos-delay={400}>
-                <Link href="/signup">
+                <Link onClick={() => setLoading(true)} href="/signup">
                   <div className="btn group mb-2 w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto">
                     <span className="relative inline-flex items-center">
                       Become a partner
@@ -358,7 +407,7 @@ export default function Header() {
           bottom: 0; /* Position at the bottom of the list item */
           left: 0%; /* Center it horizontally */
           width: 0%; /* Start with width 0 */
-          height: 1px !important; /* Adjust height as needed */
+          height: 0.5px !important; /* Adjust height as needed */
           background-color: currentColor; /* Match text color */
           transform: translateX(0%); /* Adjust to center */
           transition: width 0.4s ease-in-out; /* Smooth transition */
