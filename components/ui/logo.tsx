@@ -3,15 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
 import { useLoading } from "@/context/uicontext";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation"; // Import usePathname
 
 export default function Logo({ footer }: any) {
   const { setLoading } = useLoading();
-  const router = useRouter(); // Get the current route info
+  const router = useRouter(); // Router for navigation
+  const pathname = usePathname(); // Get the current pathname
 
   const handleClick = (e: any) => {
     e.preventDefault(); // Prevent the default link behavior
-    if (router.pathname === "/") {
+    if (pathname === "/") {
       // If already on '/', reload the page
       window.location.reload();
     } else {
