@@ -31,7 +31,7 @@ export default function Cta() {
                   href="#0"
                 >
                   <span className="relative inline-flex items-center">
-                    Start Building
+                    Become a partner
                     <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
@@ -43,7 +43,7 @@ export default function Cta() {
                   className="btn relative w-full bg-gradient-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"
                   href="#0"
                 >
-                  Schedule Demo
+                  Schedule Meeting
                 </a>
               </div>
             </div>

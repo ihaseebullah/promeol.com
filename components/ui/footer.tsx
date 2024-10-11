@@ -5,7 +5,7 @@ import FooterIllustration from "@/public/images/footer-illustration.svg";
 export default function Footer() {
   return (
     <footer>
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* Footer illustration */}
         <div
           className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
@@ -22,14 +22,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
           {/* 1st block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-sm font-medium text-gray-200">Our Products</h3>
+            <ul className="space-y-2 text-sm" style={{minWidth:300}}>
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Features
+                  PB 365
                 </a>
               </li>
               <li>
@@ -37,7 +37,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Integrations
+                  Learning Managment System
                 </a>
               </li>
               <li>
@@ -45,7 +45,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Pricing &amp; Plans
+                  Property Go
                 </a>
               </li>
               <li>
@@ -53,7 +53,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Changelog
+                  AeroEstate
                 </a>
               </li>
               <li>
@@ -61,15 +61,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Our method
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  User policy
+                  MenuKhwaga
                 </a>
               </li>
             </ul>
@@ -151,17 +143,15 @@ export default function Footer() {
             </ul>
           </div>
           {/* 4th block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">
-              Content Library
-            </h3>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-2" >
+            <h3 className="text-sm font-medium text-gray-200">Get Involved</h3>
+            <ul className="space-y-2 text-sm" style={{minWidth:300}}>
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Templates
+                  Partner with Us
                 </a>
               </li>
               <li>
@@ -169,7 +159,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Tutorials
+                  Custom Software Development
                 </a>
               </li>
               <li>
@@ -177,7 +167,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Knowledge base
+                  Affiliate Program
                 </a>
               </li>
               <li>
@@ -185,7 +175,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Learn
+                  Become a Supplier
                 </a>
               </li>
               <li>
@@ -193,13 +183,13 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#0"
                 >
-                  Cookie manager
+                  Restaurant Solutions
                 </a>
               </li>
             </ul>
           </div>
           {/* 5th block */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
+          <div className="col-span-2 md:col-span-4 lg:col-span-1 text-center">
             <div className="mb-3">
               <Logo footer={false} />
             </div>
