@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
 
-export default function Logo({ footer }) {
+export default function Logo({ footer }:any) {
   return (
     <Link href="/" className="inline-flex shrink-0" aria-label="Cruip">
       <Image
