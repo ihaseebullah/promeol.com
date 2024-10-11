@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import Image from "next/image";
@@ -10,13 +10,15 @@ import { faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { faShapes } from "@fortawesome/free-solid-svg-icons";
 import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
+import { Loader } from "./loader";
+import { useLoading } from "@/context/uicontext";
 
 export default function Header() {
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
   const [showGetInvolvedDropdown, setShowGetInvolvedDropdown] = useState(false);
-
+  const { loading, setLoading } = useLoading();
   const [productsDropdownTimeout, setProductsDropdownTimeout] =
     useState<NodeJS.Timeout | null>(null);
   const [companyDropdownTimeout, setCompanyDropdownTimeout] =
@@ -78,18 +80,9 @@ export default function Header() {
     setShowGetInvolvedDropdown(true);
   };
 
-  const handleGetInvolvedMouseLeave = () => {
-    setGetInvolvedDropdownTimeout(
-      setTimeout(() => {
-        setShowGetInvolvedDropdown(false);
-      }, 100)
-    );
-  };
-
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
-      <Image alt="loader" className="w-full h-20"src={require("@/public/images/loader.gif")} />
-
+      {loading && <Loader />}
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Site branding */}
@@ -104,7 +97,11 @@ export default function Header() {
               onMouseEnter={handleProductsMouseEnter}
               onMouseLeave={handleProductsMouseLeave}
             >
-              <Link href="/products" className="btn-sm relative z-10">
+              <Link
+                onClick={() => setLoading(true)}
+                href="/products"
+                className="btn-sm relative z-10"
+              >
                 <FontAwesomeIcon icon={faLaptop} className="fa-fw mx-1" />
                 Our Products
               </Link>
