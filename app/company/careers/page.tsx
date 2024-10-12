@@ -5,7 +5,7 @@ import Cta from "@/components/cta";
 import { useEffect } from "react";
 import { useLoading } from "@/context/uicontext";
 
-export default function Products() {
+export default function Careers() {
   const { loading, setLoading } = useLoading();
   useEffect(() => {
     setLoading(true);

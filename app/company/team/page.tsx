@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import { useLoading } from "@/context/uicontext";
 import { TeamCards } from "@/components/ui/card-team";
 import { SectionHeader } from "@/components/ui/section-header";
-export default function Products() {
+import Head from "next/head";
+export default function Team() {
   const { loading, setLoading } = useLoading();
   useEffect(() => {
     setLoading(true);
@@ -18,8 +19,15 @@ export default function Products() {
 
   return (
     <>
+      <Head>
+        <title>Team- Promeol</title>
+      </Head>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-[20px]">
-        <SectionHeader outline="Its always talent behind great success" title="Our dedicated Team" description="lorem ipsum dollar and go to the main stream for getting some potatoes out fo the box yet the cat came out empty handed sorry toes"/>
+        <SectionHeader
+          outline="Its always talent behind great success"
+          title="Our dedicated Team"
+          description="lorem ipsum dollar and go to the main stream for getting some potatoes out fo the box yet the cat came out empty handed sorry toes"
+        />
         <TeamCards />
       </div>
       <PageIllustration />

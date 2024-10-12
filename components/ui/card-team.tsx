@@ -37,6 +37,7 @@ export const TeamCards = () => {
       {team.map((memeber) => {
         return (
           <Card
+            key={memeber.name}
             image={memeber.image}
             name={memeber.name}
             description={memeber.description}

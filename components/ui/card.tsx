@@ -1,11 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
-export const Card = ({
-  image,
-  name,
-  description,
-  designation,
-}: any) => {
+export const Card = ({ image, name, description, designation }: any) => {
   return (
     <div
       style={{
@@ -22,7 +18,12 @@ export const Card = ({
           className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
           aria-hidden="true"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width={9} height={8} fill="none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={9}
+            height={8}
+            fill="none"
+          >
             <path
               fill="#F4F4F5"
               d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
@@ -30,7 +31,9 @@ export const Card = ({
           </svg>
         </div>
         {/* Image */}
-        <div className="relative w-full h-56"> {/* Set a consistent height */}
+        <div className="relative w-full h-56">
+          {" "}
+          {/* Set a consistent height */}
           <Image
             style={{ objectFit: "cover" }} // Ensures the image covers the area without distortion
             className="inline-flex z-30"
@@ -54,6 +57,52 @@ export const Card = ({
                 {designation}
               </span>
             </span>
+          </div>
+          <div className="flex justify-center items-center ">
+            <ul className="inline-flex gap-1">
+              <li>
+                <div
+                  className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                  aria-label="Twitter"
+                >
+                  <svg
+                    className="h-8 w-8 fill-current"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
+                  </svg>
+                </div>
+              </li>
+              <li>
+                <div
+                  className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                  aria-label="Linkedin"
+                >
+                  <Image
+                    className="mt-[5px]"
+                    src={require("@/public/images/linkedin.svg")}
+                    alt="linkedin "
+                    height={17}
+                    width={17}
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                  aria-label="Github"
+                >
+                  <svg
+                    className="h-8 w-8 fill-current"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
+                  </svg>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
