@@ -222,10 +222,7 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link
-                      onClick={() => setLoading(true)}
-                      href="/products/category2"
-                    >
+                    <Link onClick={() => setLoading(true)} href="/company/blog">
                       Blog
                     </Link>
                     <span className="expanding-line"></span>
@@ -237,7 +234,7 @@ export default function Header() {
                     />
                     <Link
                       onClick={() => setLoading(true)}
-                      href="/products/category2"
+                      href="/company/careers"
                     >
                       Careers
                     </Link>
@@ -248,10 +245,7 @@ export default function Header() {
                       icon={Icons.faCaretRight}
                       className="fa-fw mr-1 hover:text-indigo-500"
                     />
-                    <Link
-                      onClick={() => setLoading(true)}
-                      href="/products/category2"
-                    >
+                    <Link onClick={() => setLoading(true)} href="/company/team">
                       Our Team
                     </Link>
                     <span className="expanding-line"></span>
@@ -263,7 +257,7 @@ export default function Header() {
                     />
                     <Link
                       onClick={() => setLoading(true)}
-                      href="/products/category1"
+                      href="/company/about_us"
                     >
                       About Us
                     </Link>
@@ -276,7 +270,7 @@ export default function Header() {
                     />
                     <Link
                       onClick={() => setLoading(true)}
-                      href="/products/category2"
+                      href="/company/diversity_and_inclusion"
                     >
                       Diversity & Inclusion
                     </Link>
@@ -357,7 +351,7 @@ export default function Header() {
             <li className="relative group hover:text-indigo-500">
               <div data-aos="fade-down" data-aos-delay={400}>
                 <Link onClick={() => setLoading(true)} href="/signup">
-                  <Button title="Become a partner" icon={Icons.faArrowRight}/>
+                  <Button title="Become a partner" icon={Icons.faArrowRight} />
                 </Link>
               </div>
             </li>
