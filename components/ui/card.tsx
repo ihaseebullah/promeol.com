@@ -5,12 +5,7 @@ export const Card = ({
   name,
   description,
   designation,
-}: {
-  image: string; // Use 'string' instead of 'String'
-  name: string;
-  description: string;
-  designation: string;
-}) => {
+}: any) => {
   return (
     <div
       style={{
