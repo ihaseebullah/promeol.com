@@ -29,7 +29,7 @@ export const TeamCards = () => {
         "As a Social Media Manager, I create engaging content and strategies that boost brand visibility and community engagement.",
       designation: "Socail Media Manager",
       image: Yaseen,
-    },
+    }
   ];
   return (
     <Spotlight className="mb-10 group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">

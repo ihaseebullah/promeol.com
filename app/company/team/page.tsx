@@ -7,8 +7,10 @@ import { useLoading } from "@/context/uicontext";
 import { TeamCards } from "@/components/ui/card-team";
 import { SectionHeader } from "@/components/ui/section-header";
 import Head from "next/head";
+
 export default function Team() {
   const { loading, setLoading } = useLoading();
+  
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
@@ -20,9 +22,9 @@ export default function Team() {
   return (
     <>
       <Head>
-        <title>Team- Promeol</title>
+        <title>Team - Promeol</title>
       </Head>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-[20px]">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-[20px] flex flex-col items-center">
         <SectionHeader
           outline="Passionate and creative, we strive for excellence."
           title="Our dedicated Team"
