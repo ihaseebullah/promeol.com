@@ -33,7 +33,7 @@ export default function Logo({ footer }: any) {
     >
       <Image
         src={logo}
-        alt="Cruip Logo"
+        alt="promeol Logo"
         width={!footer ? 140 : 500}
         height={!footer ? 70 : 100}
       />
