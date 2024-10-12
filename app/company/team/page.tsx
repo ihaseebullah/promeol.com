@@ -24,14 +24,14 @@ export default function Team() {
       </Head>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-[20px]">
         <SectionHeader
-          outline="Its always talent behind great success"
+          outline="Passionate and creative, we strive for excellence."
           title="Our dedicated Team"
-          description="lorem ipsum dollar and go to the main stream for getting some potatoes out fo the box yet the cat came out empty handed sorry toes"
+          description="With diverse skills and backgrounds, our dedicated team works harmoniously to achieve remarkable results."
         />
         <TeamCards />
       </div>
       <PageIllustration />
       <Cta />
-    </>
+    </> 
   );
 }

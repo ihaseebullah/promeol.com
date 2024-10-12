@@ -35,7 +35,7 @@ export const Card = ({ image, name, description, designation }: any) => {
           {" "}
           {/* Set a consistent height */}
           <Image
-            style={{ objectFit: "cover" }} // Ensures the image covers the area without distortion
+            style={{ objectFit: "cover" }}
             className="inline-flex z-30"
             src={image}
             fill // Use fill to make the image responsive
