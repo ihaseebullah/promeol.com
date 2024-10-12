@@ -6,7 +6,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import Header from "@/components/ui/header";
 import { LoadingProvider } from "@/context/uicontext";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 const inter = Inter({
@@ -44,7 +43,7 @@ const nacelle = localFont({
 
 export const metadata = {
   title: "Promeol",
-  description: "Startup powring the rest!",
+  description: "Startup powering the rest!",
 };
 
 export default function RootLayout({
@@ -55,16 +54,19 @@ export default function RootLayout({
   return (
     <LoadingProvider>
       <html lang="en">
-        <title>Promeol</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        />
+        <head>
+          <title>Promeol</title>
+        </head>
         <body
-          className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
+          className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased no-scrollbar max-h-[400px] overflow-y-auto
+  [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gradient-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%]
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500`}
         >
-          <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+          <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip no-scrollbar">
             <Header />
             {children}
           </div>
