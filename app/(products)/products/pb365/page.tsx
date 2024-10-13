@@ -27,7 +27,7 @@ export default function Products() {
       />
       <ProductOverview
         github={"https://github.com/ihaseebullah/Point-Of-Sale"}
-        productName={"PB365"}
+        productName={"PB-365"}
         paragraph1={
           "PB 365 is a cloud-based retail management solution tailored for Megamart Enterprises, built on the MERN stack. It streamlines operations with a secure point-of-sale (POS) system that enables quick transactions and automated invoicing, reducing manual errors. Advanced sales analytics provide real-time insights that help business leaders make informed decisions, enhancing profitability and operational efficiency."
         }
