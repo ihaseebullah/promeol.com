@@ -37,9 +37,7 @@ export const Modal = ({
     console.log(formData);
     onClose();
   };
-  useEffect(() => {
-    setFormData({ ...formData, date: startDate });
-  }, [startDate]);
+
   return (
     <div
       className="relative z-900"

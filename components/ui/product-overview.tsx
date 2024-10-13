@@ -10,12 +10,14 @@ export const ProductOverview = ({
   paragraph1,
   paragraph2,
   github,
+  learnMore,
 }: {
   productName: String;
   paragraph1: String;
   link: String;
   paragraph2?: String;
   github: String;
+  learnMore: String;
 }) => {
   const [isLearnMoreModalOpen, setIsLearnMoreModalOpen] = useState(false); // Separate state for "Learn more" modal
   const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState(false); // Separate state for "Purchase" modal
@@ -37,12 +39,19 @@ export const ProductOverview = ({
         ></iframe>
       </div>
 
-      <div className="m-4 md:w-1/2 p-5 rounded-md flex flex-col justify-start relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
+      <div
+        style={{ minHeight: 400,maxHeight: 400 }}
+        className="m-4 md:w-1/2 p-5 rounded-md flex flex-col justify-start relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+      >
         <h2 className="animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl bg-gradient-to-r from-gray-200 via-indigo-200 to-gray-50">
           {productName}
         </h2>
-        <p className="text-justify md:text-left my-2">{paragraph1}</p>
-        <p className="text-justify md:text-left">{paragraph2}</p>
+        <p className="text-justify md:text-left my-2">
+          {paragraph1.substring(0, 347)+'...'}
+        </p>
+        <p className="text-justify md:text-left">
+          {paragraph2?.substring(0, 347)+'...'}
+        </p>
 
         <div className="md:w-full flex items-center justify-start space-x-4 mt-4">
           {/* "Purchase" Button */}
@@ -88,19 +97,7 @@ export const ProductOverview = ({
             isOpen={isLearnMoreModalOpen}
             onClose={() => setIsLearnMoreModalOpen(false)}
           >
-            <p className="text-sm text-gray-500 text-justify">
-              Promeol's retail management solution for Megamart Enterprises is
-              built using the MERN stack (MongoDB, Express.js, React.js,
-              Node.js). The frontend is developed with React.js, offering a
-              highly responsive and user-friendly interface for seamless
-              navigation. On the backend, Express.js powers the API, ensuring
-              secure and efficient communication between the client and the
-              server. MongoDB serves as the database, providing flexible and
-              scalable storage to handle growing data needs. The entire solution
-              is deployed on a cloud platform (AWS, GCP, or Azure), ensuring
-              enhanced accessibility, scalability, and support for large-scale
-              operations.
-            </p>
+            <p className="text-sm text-gray-500 text-justify">{learnMore}</p>
           </Modal>
 
           {/* "Purchase Software" Modal */}
