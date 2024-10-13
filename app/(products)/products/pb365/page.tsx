@@ -26,6 +26,7 @@ export default function Products() {
         uhOh={false}
       />
       <ProductOverview
+        github={"https://github.com/ihaseebullah/Point-Of-Sale"}
         productName={"PB365"}
         paragraph1={
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, illo perspiciatis quibusdam molestias obcaecati veniam culpa provident doloremque tempore, facere ratione fugit officia omnis. Repellat neque iste accusantium pariatur quidem."
