@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Button } from "./button";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
+import { Modal } from "./modal";
+import { useState } from "react";
 export const ProductOverview = ({
   productName,
   link,
@@ -14,6 +16,7 @@ export const ProductOverview = ({
   paragraph2?: String;
   github: String;
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div
       data-aos="fade-down"
@@ -38,7 +41,17 @@ export const ProductOverview = ({
         <p className="text-justify md:text-left">{paragraph2}</p>
         <div className="md:w-full flex items-center justify-start space-x-4 mt-4">
           <Button title="Purchase" icon={Icons.faCartArrowDown} />
-          <Button title="Learn more" glassy={true} icon={Icons.faInfoCircle} />
+          <button
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+          >
+            <Button
+              title="Learn more"
+              glassy={true}
+              icon={Icons.faInfoCircle}
+            />
+          </button>
           <Link target="_blank" href={`${github}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +65,15 @@ export const ProductOverview = ({
               />
             </svg>
           </Link>
+          <Modal
+            title="Information"
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          >
+            <p className="text-sm text-gray-500 text-justify">
+            Promeol's retail management solution for Megamart Enterprises is built using the MERN stack (MongoDB, Express.js, React.js, Node.js). The frontend is developed with React.js, offering a highly responsive and user-friendly interface for seamless navigation. On the backend, Express.js powers the API, ensuring secure and efficient communication between the client and the server. MongoDB serves as the database, providing flexible and scalable storage to handle growing data needs. The entire solution is deployed on a cloud platform (AWS, GCP, or Azure), ensuring enhanced accessibility, scalability, and support for large-scale operations.
+            </p>
+          </Modal>
         </div>
       </div>
     </div>
