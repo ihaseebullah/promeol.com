@@ -40,7 +40,7 @@ export const ProductOverview = ({
       </div>
 
       <div
-        style={{ minHeight: 400,maxHeight: 400 }}
+        style={{ minHeight: 400}}
         className="m-4 md:w-1/2 p-5 rounded-md flex flex-col justify-start relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
       >
         <h2 className="animate-[gradient_6s_linear_infinite] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl bg-gradient-to-r from-gray-200 via-indigo-200 to-gray-50">
