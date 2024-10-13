@@ -13,3 +13,11 @@
 .animate-slide-up {
     animation: slide-up 0.5s ease-out;
 }
+
+.custom-datepicker {
+    width: 200px !important; /* Set desired width */
+    height: auto !important; /* Adjust height if needed */
+    max-height: 300px; /* Optional: Limit maximum height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
