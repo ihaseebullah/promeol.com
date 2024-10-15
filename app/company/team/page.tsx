@@ -27,7 +27,7 @@ export default function Team() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-[20px] flex flex-col items-center">
         <SectionHeader
           outline="Passionate and creative, we strive for excellence."
-          title="Our dedicated Team"
+          title="Our Dedicated Team"
           description="With diverse skills and backgrounds, our dedicated team works harmoniously to achieve remarkable results."
         />
         <TeamCards />

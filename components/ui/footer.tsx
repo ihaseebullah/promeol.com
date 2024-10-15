@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <div className="text-indigo-200/65 transition hover:text-indigo-500">
-                  <Link href={"/company/team"}>Diversity &amp; Inclusion</Link>
+                  <Link href={"/company/team"}>Our Team</Link>
                 </div>
               </li>
               <li>
