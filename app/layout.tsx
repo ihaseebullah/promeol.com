@@ -56,6 +56,11 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <title>Promeol</title>
+          <script
+            async
+            data-nf='{"formurl":"https://noteforms.com/forms/promeol-wave-1-txjzqa","emoji":"💬","position":"right","bgcolor":"#3B82F6","width":"500"}'
+            src="https://noteforms.com/widgets/embed-min.js"
+          ></script>
         </head>
         <body
           className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased no-scrollbar max-h-[400px] overflow-y-auto
