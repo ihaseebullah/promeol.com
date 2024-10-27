@@ -17,13 +17,6 @@ export const TeamCards = () => {
       image: Haseeb,
     },
     {
-      name: "Talha Sher",
-      description:
-        "As CTO, I lead innovation and empower teams to deliver exceptional software solutions using the latest tools.",
-      designation: "Co Founder and CTO",
-      image: Talha,
-    },
-    {
       name: "Yaseen Malik",
       description:
         "As a Social Media Manager, I create engaging content and strategies that boost brand visibility and community engagement.",
